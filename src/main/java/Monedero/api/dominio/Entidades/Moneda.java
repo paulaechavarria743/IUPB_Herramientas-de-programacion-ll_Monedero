@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class Moneda {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_moneda")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "secuencia_moneda")
     @SequenceGenerator(name = "secuencia_moneda", sequenceName = "secuencia_moneda", allocationSize = 1)
     @Column(name = "Id")
     private int Id;
@@ -33,8 +33,7 @@ public class Moneda {
     @Column(name = "Imagen")
     private byte[] Imagen;
 
-    public Moneda() {
-    }
+    public Moneda() {}
 
     public Moneda(int Id, String Moneda, String Sigla, String Simbolo, String Emisor, byte[] Imagen) {
         this.Id = Id;
@@ -47,19 +46,14 @@ public class Moneda {
 
     public int getId() { return Id; }
     public void setId(int Id) { this.Id = Id; }
-
     public String getMoneda() { return Moneda; }
     public void setMoneda(String Moneda) { this.Moneda = Moneda; }
-
     public String getSigla() { return Sigla; }
     public void setSigla(String Sigla) { this.Sigla = Sigla; }
-
     public String getSimbolo() { return Simbolo; }
     public void setSimbolo(String Simbolo) { this.Simbolo = Simbolo; }
-
     public String getEmisor() { return Emisor; }
     public void setEmisor(String Emisor) { this.Emisor = Emisor; }
-
     public byte[] getImagen() { return Imagen; }
     public void setImagen(byte[] Imagen) { this.Imagen = Imagen; }
 }

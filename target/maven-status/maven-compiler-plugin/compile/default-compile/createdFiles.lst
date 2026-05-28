@@ -1,0 +1,14 @@
+monedero\api\presentacion\controladores\PaisControlador.class
+monedero\api\infraestructura\repositorios\IcambiomonedaRepositorio.class
+monedero\api\ApiApplication.class
+monedero\api\aplicacion\servicios\PaisServicio.class
+monedero\api\dominio\entidades\CambioMoneda.class
+monedero\api\presentacion\controladores\MonedaControlador.class
+monedero\api\infraestructura\repositorios\IpaisRepositorio.class
+monedero\api\dominio\entidades\Moneda.class
+monedero\api\infraestructura\repositorios\ImonedaRepositorio.class
+monedero\api\presentacion\controladores\CambioMonedaControlador.class
+monedero\api\aplicacion\servicios\CambioMonedaServicio.class
+monedero\api\aplicacion\servicios\MonedaServicio.class
+monedero\api\dominio\entidades\Pais.class
+monedero\api\dominio\entidades\CambioMonedaId.class

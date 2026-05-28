@@ -11,7 +11,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>campeonatosfifa</groupId>
+	<groupId>monedero</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api</name>

@@ -15,61 +15,54 @@ import jakarta.persistence.Table;
 public class Pais {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_pais")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "secuencia_pais")
     @SequenceGenerator(name = "secuencia_pais", sequenceName = "secuencia_pais", allocationSize = 1)
-    @Column(name = "Id")
-    private int id;
+    @Column(name = "id")
+    private int Id;
 
-    @Column(name = "Pais", length = 50)
-    private String pais;
+    @Column(name = "pais", length = 50)
+    private String Pais;
 
-    @Column(name = "CodigoAlfa2", length = 5)
-    private String codigoAlfa2;
+    @Column(name = "codigoalfa2", length = 5)
+    private String CodigoAlfa2;
 
-    @Column(name = "CodigoAlfa3", length = 5)
-    private String codigoAlfa3;
+    @Column(name = "codigoalfa3", length = 5)
+    private String CodigoAlfa3;
 
-    @Column(name = "Mapa")
-    private byte[] mapa;
+    @Column(name = "mapa")
+    private byte[] Mapa;
 
-    @Column(name = "Bandera")
-    private byte[] bandera;
+    @Column(name = "bandera")
+    private byte[] Bandera;
 
     @ManyToOne
-    @JoinColumn(name = "IdMoneda", referencedColumnName = "Id")
+    @JoinColumn(name = "idmoneda", referencedColumnName = "id")
     private Moneda moneda;
 
-    public Pais() {
-    }
+    public Pais() {}
 
-    public Pais(int id, String pais, String codigoAlfa2, String codigoAlfa3, byte[] mapa, byte[] bandera, Moneda moneda) {
-        this.id = id;
-        this.pais = pais;
-        this.codigoAlfa2 = codigoAlfa2;
-        this.codigoAlfa3 = codigoAlfa3;
-        this.mapa = mapa;
-        this.bandera = bandera;
+    public Pais(int Id, String Pais, String CodigoAlfa2, String CodigoAlfa3, byte[] Mapa, byte[] Bandera, Moneda moneda) {
+        this.Id = Id;
+        this.Pais = Pais;
+        this.CodigoAlfa2 = CodigoAlfa2;
+        this.CodigoAlfa3 = CodigoAlfa3;
+        this.Mapa = Mapa;
+        this.Bandera = Bandera;
         this.moneda = moneda;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public String getPais() { return pais; }
-    public void setPais(String pais) { this.pais = pais; }
-
-    public String getCodigoAlfa2() { return codigoAlfa2; }
-    public void setCodigoAlfa2(String codigoAlfa2) { this.codigoAlfa2 = codigoAlfa2; }
-
-    public String getCodigoAlfa3() { return codigoAlfa3; }
-    public void setCodigoAlfa3(String codigoAlfa3) { this.codigoAlfa3 = codigoAlfa3; }
-
-    public byte[] getMapa() { return mapa; }
-    public void setMapa(byte[] mapa) { this.mapa = mapa; }
-
-    public byte[] getBandera() { return bandera; }
-    public void setBandera(byte[] bandera) { this.bandera = bandera; }
-
+    public int getId() { return Id; }
+    public void setId(int Id) { this.Id = Id; }
+    public String getPais() { return Pais; }
+    public void setPais(String Pais) { this.Pais = Pais; }
+    public String getCodigoAlfa2() { return CodigoAlfa2; }
+    public void setCodigoAlfa2(String CodigoAlfa2) { this.CodigoAlfa2 = CodigoAlfa2; }
+    public String getCodigoAlfa3() { return CodigoAlfa3; }
+    public void setCodigoAlfa3(String CodigoAlfa3) { this.CodigoAlfa3 = CodigoAlfa3; }
+    public byte[] getMapa() { return Mapa; }
+    public void setMapa(byte[] Mapa) { this.Mapa = Mapa; }
+    public byte[] getBandera() { return Bandera; }
+    public void setBandera(byte[] Bandera) { this.Bandera = Bandera; }
     public Moneda getMoneda() { return moneda; }
     public void setMoneda(Moneda moneda) { this.moneda = moneda; }
 }
